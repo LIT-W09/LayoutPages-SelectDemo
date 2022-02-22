@@ -1,0 +1,17 @@
+﻿@using WebApplication14.Models
+@model SelectDemoIndexViewModel
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form method="post" action="/selectdemo/post">
+            <select class="form-control" name="colorId">
+
+                @foreach (ColorOption colorOption in Model.Colors)
+                {
+                    <option value="@colorOption.Id">@colorOption.Color</option>
+                }
+            </select>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
